@@ -1,0 +1,38 @@
+version: "3.8"
+services: 
+    mariadb:
+        container_name: mariadb
+        image: mariadb 
+        restart: always
+        environment: 
+            - MYSQL_ROOT_PASSWORD=password
+        volumes:
+            - ./image/mariadb/data:/var/lib/mysql
+            - ./image/mariadb/init:/docker-entrypoint-initdb.d
+        expose: 
+            - "3306"
+### UNCOMMENT FOR ENABLE ACCESS VIA LOCALHOST PORT 3306
+#        ports:
+#            - 127.0.0.1:3306:3306
+        networks:
+### UNCOMMENT FOR ENABLE ACCESS VIA LOCALHOST PORT 3306
+#            - ext
+            - analysis
+    shiny:
+        container_name: oulad.dashboard
+        build: ./image/oulad.dashboard
+        depends_on: 
+            - mariadb
+        expose:
+            - "3838"
+        ports:
+            - 127.0.0.1:3838:3838
+        networks:
+            - ext
+            - analysis
+networks: 
+    ext:
+        driver: bridge
+    analysis:
+        driver: bridge
+        internal: true

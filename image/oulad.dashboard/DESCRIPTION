@@ -1,0 +1,29 @@
+Package: oulad.dashboard
+Title: Example dashboard for OULAD dataset
+Version: 0.0.0.9000
+Authors@R: person('Jakub', 'Kuzilek', email = 'jakub.kuzilek@hu-berlin.de', role = c('cre', 'aut'))
+Description: This is example dashboard for the course 'LA Dashboards' taught at HU Berlin in 2021.
+License: MIT + file LICENSE
+Imports: 
+    config,
+    golem,
+    shiny,
+    attempt,
+    DT,
+    glue,
+    htmltools,
+    shinydashboard,
+    RMariaDB,
+    DBI,
+    magrittr,
+    dbplyr,
+    dplyr,
+    stringr,
+    lubridate,
+    tidyr,
+    ggplot2
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.0
+URL: https://gitlab.informatik.hu-berlin.de/kuzilekj/la-dashboards-course
+BugReports: https://gitlab.informatik.hu-berlin.de/kuzilekj/la-dashboards-course/issues

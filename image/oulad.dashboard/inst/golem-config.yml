@@ -1,0 +1,19 @@
+default:
+  golem_name: Example dashboard R
+  golem_version: 0.0.0.9000
+  analytics_db_host: 127.0.0.1
+  analytics_db_port: 3306
+  analytics_db_name: analyse_anonymised
+  analytics_db_user: root
+  analytics_db_pass: password
+production:
+  app_prod: yes
+  golem_name: Example dashboard R
+  golem_version: 0.0.0.9000
+  analytics_db_host: mariadb
+  analytics_db_port: 3306
+  analytics_db_name: analyse_anonymised
+  analytics_db_user: root
+  analytics_db_pass: password
+dev:
+  golem_wd: !expr here::here()
