@@ -1,4 +1,4 @@
-# LA Dashboards course example solution
+## LA Dashboards course example solution
 [![Lifecycle: mature](https://img.shields.io/badge/lifecycle-mature-green.svg)](https://www.tidyverse.org/lifecycle/#mature)
 
 This repository contains the example solution for the course "LA Dashboards" taught in WS 2021 at Humboldt-Universität zu Berlin. It contains two docker images:
@@ -11,4 +11,11 @@ To run example execute:
 ``` {bash}
 docker-compose up
 ```
-in the project folder.
+in the project folder. Be patient - shiny container takes time to build and the mariadb database is "huge" so the initial insert takes time too. 
+
+## Requirements
+Docker Engine: 20.10.7 or higher
+
+Docker Compose: 1.29.2 or higher
+
+> You need to have `docker` daemon up and running to run this example.
